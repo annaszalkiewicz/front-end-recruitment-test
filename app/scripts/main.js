@@ -1,3 +1,7 @@
+import Model from './Bacon/Model';
+import View from './Bacon/View';
+import Controller from './Bacon/Controller';
+
 /*
  *
  *  Web Starter Kit
@@ -25,20 +29,22 @@
   // service worker from an insecure origin will trigger JS console errors. See
   // http://www.chromium.org/Home/chromium-security/prefer-secure-origins-for-powerful-new-features
 
-  const isLocalhost = Boolean(window.location.hostname === 'localhost' ||
-    // [::1] is the IPv6 localhost address.
-    window.location.hostname === '[::1]' ||
-    // 127.0.0.1/8 is considered localhost for IPv4.
-    window.location.hostname.match(
-      /^127(?:\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)){3}$/
-    )
+  const isLocalhost = Boolean(
+    window.location.hostname === 'localhost' ||
+      // [::1] is the IPv6 localhost address.
+      window.location.hostname === '[::1]' ||
+      // 127.0.0.1/8 is considered localhost for IPv4.
+      window.location.hostname.match(
+        /^127(?:\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)){3}$/
+      )
   );
 
   if (
-    'serviceWorker' in navigator
-    && (window.location.protocol === 'https:' || isLocalhost)
+    'serviceWorker' in navigator &&
+    (window.location.protocol === 'https:' || isLocalhost)
   ) {
-    navigator.serviceWorker.register('service-worker.js')
+    navigator.serviceWorker
+      .register('service-worker.js')
       .then(function(registration) {
         // updatefound is fired if service-worker.js changes.
         registration.onupdatefound = function() {
@@ -61,19 +67,32 @@
                 break;
 
               case 'redundant':
-                throw new Error('The installing ' +
-                    'service worker became redundant.');
+                throw new Error(
+                  'The installing ' + 'service worker became redundant.'
+                );
 
               default:
-                  // Ignore
+                // Ignore
               }
             };
           }
         };
-      }).catch(function(e) {
+      })
+      .catch(function(e) {
         console.error('Error during service worker registration:', e);
       });
   }
 
   // Your custom JavaScript goes here
+  /**
+   * Initialize Bacon controller
+   * @param {object} model
+   * @param {object} view
+   * @param {object} controller
+   */
+  const model = new Model();
+  const view = new View(model);
+  const controller = new Controller(model, view);
+
+  console.log(controller);
 })();
