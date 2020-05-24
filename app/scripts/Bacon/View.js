@@ -23,14 +23,14 @@ class View {
    */
   render() {
     const img = document.createElement('img');
-    img.src = this.model.image300;
+    img.src = this.model.image;
     img.alt = 'Bacon';
     img.classList.add('overview-clone');
     img.setAttribute('width', this.model.width);
     img.setAttribute('height', this.model.height);
     img.setAttribute('loading', 'lazy');
-    img.style.top = Math.random() * 90 + '%';
-    img.style.left = Math.random() * 90 + '%';
+    img.style.top = `${Math.random() * 90}%`;
+    img.style.left = `${Math.random() * 90}%`;
     this.container.appendChild(img);
   }
 }
