@@ -2,6 +2,10 @@ import Model from './Bacon/Model';
 import View from './Bacon/View';
 import Controller from './Bacon/Controller';
 
+import FormModel from './Form/Model';
+import FormView from './Form/View';
+import FormController from './Form/Controller';
+
 /*
  *
  *  Web Starter Kit
@@ -90,12 +94,22 @@ import Controller from './Bacon/Controller';
    */
   if (window.location.pathname === '/submodule.html') {
     /**
-    * Initialize Bacon controller
-    * @param {object} model
-    * @param {object} view
-    */
+     * Initialize Bacon controller
+     * @param {object} model
+     * @param {object} view
+     */
     const model = new Model();
     const view = new View(model);
     new Controller(model, view);
+    /**
+     * Initialize Form controller
+     * @param {object} FormModel
+     * @param {object} FormView
+     * @param {object} FormController
+     */
+
+    const formModel = new FormModel();
+    const formView = new FormView();
+    new FormController(formModel, formView);
   }
 })();
