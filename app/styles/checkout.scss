@@ -14,6 +14,12 @@
     width: 66%;
   }
 }
+.checkout-column--left {
+  width: 100%;
+}
+.checkout-column--right {
+  width: 100%;
+}
 .checkout-row {
   display: flex;
   justify-content: space-between;
@@ -276,4 +282,12 @@
   font-size: 1.3rem;
   margin: 0.3rem 0 0 0;
   color: $black;
+}
+@media screen and (min-width: 768px) {
+  .checkout-column--left {
+    width: 66%;
+  }
+  .checkout-column--right {
+    width: 33%;
+  }
 }
