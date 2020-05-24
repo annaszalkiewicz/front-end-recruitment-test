@@ -77,8 +77,9 @@
         <div
           class="mdl-layout__tab-bar mdl-js-ripple-effect mdl-color--primary-dark"
         >
-          <a href="#overview" class="mdl-layout__tab is-active">Bacon</a>
-        </div>
+        <a href="#overview" class="mdl-layout__tab is-active">Bacon</a>
+        <a href="#checkout" class="mdl-layout__tab is-active">Checkout</a>
+      </div>
       </header>
       <main class="mdl-layout__content">
         <div class="mdl-layout__tab-panel is-active" id="overview">
@@ -122,6 +123,188 @@
             </picture>
           </section>
         </div>
+        <section class="mdl-layout__tab-panel checkout" id="checkout">
+          <form
+            id="checkout-form"
+            class="section--center mdl-grid mdl-grid--no-spacing checkout-form"
+          >
+            <div class="mdl-cell mdl-cell--8-col">
+              <div class="checkout-row checkout-row--no-spacing">
+                <h3 class="checkout-heading">
+                  <span class="checkout-heading--span">1</span>Personal
+                  information
+                </h3>
+              </div>
+              <div class="checkout-row checkout-row--no-spacing">
+                <div class="checkout-input--container checkout-input--left">
+                  <label class="checkout-label" for="first-name"
+                    >First name</label
+                  >
+                  <input
+                    class="checkout-input"
+                    type="text"
+                    id="first-name"
+                    placeholder="Elon"
+                  />
+                </div>
+                <div class="checkout-input--container checkout-input--right">
+                  <label class="checkout-label" for="last-name"
+                    >Last name</label
+                  >
+                  <input
+                    class="checkout-input"
+                    type="text"
+                    id="last-name"
+                    placeholder="Musk"
+                  />
+                </div>
+              </div>
+              <div class="checkout-row">
+                <div class="checkout-input--container">
+                  <label class="checkout-label" for="email">Email</label>
+                  <input
+                    class="checkout-input"
+                    type="email"
+                    id="email"
+                    placeholder="elon@spacex.com"
+                  />
+                </div>
+              </div>
+              <div class="checkout-row">
+                <div class="checkout-input--container checkout-input--left">
+                  <label for="country" class="checkout-label">Country</label>
+                  <select
+                    id="country"
+                    name="country"
+                    class="checkout-input checkout-input--select"
+                  >
+                    <optgroup>
+                      <option value="us" selected>United States</option>
+                      <option value="pl">Poland</option>
+                      <option value="uk">United Kingdom</option>
+                    </optgroup>
+                  </select>
+                </div>
+                <div class="checkout-input--container checkout-input--right">
+                  <label
+                    class="checkout-label checkout-label--capitalize"
+                    for="postal-code"
+                    >Postal code</label
+                  >
+                  <input
+                    class="checkout-input"
+                    type="text"
+                    id="postal-code"
+                    placeholder="10001"
+                  />
+                </div>
+              </div>
+              <div class="checkout-row">
+                <div class="checkout-input--container">
+                  <label
+                    class="checkout-label checkout-label--capitalize"
+                    for="phone"
+                    >Phone number</label
+                  >
+                  <input
+                    class="checkout-input"
+                    type="text"
+                    id="phone"
+                    placeholder="(212) 692-93-92"
+                  />
+                </div>
+              </div>
+              <div class="checkout-row">
+                <h3 class="checkout-heading checkout-heading--payment">
+                  <span class="checkout-heading--span">2</span>
+                  Payment details
+                </h3>
+                <span class="material-icons checkout-heading--lock">lock</span>
+              </div>
+              <div class="checkout-row">
+                <div class="checkout-input--container">
+                  <label
+                    class="checkout-label checkout-label--capitalize"
+                    for="card-number"
+                    >Credit card number</label
+                  >
+                  <input
+                    class="checkout-input"
+                    type="text"
+                    id="card-number"
+                    placeholder="0000-0000-0000-0000"
+                  />
+                  <div class="checkout-input--image">
+                    <img src="./images/visa.svg" alt="Visa" />
+                  </div>
+                </div>
+              </div>
+              <div class="checkout-row">
+                <div class="checkout-input--container checkout-input--left">
+                  <label class="checkout-label" for="security-code"
+                    >Security code</label
+                  >
+                  <input
+                    class="checkout-input"
+                    type="password"
+                    id="security-code"
+                    placeholder="***"
+                  />
+                </div>
+                <div class="checkout-input--container checkout-input--right">
+                  <label class="checkout-label" for="exp-date"
+                    >Expiration date</label
+                  >
+                  <input
+                    class="checkout-input"
+                    type="text"
+                    id="exp-date"
+                    placeholder="MM/YY"
+                  />
+                </div>
+              </div>
+              <div class="checkout-row">
+                <button id="checkout-button" class="checkout-button" disabled>
+                  <span class="material-icons">shopping_cart</span>
+                  Complete purchase
+                </button>
+              </div>
+            </div>
+            <aside class="mdl-cell mdl-cell--4-col">
+              <div class="order">
+                <div class="order-border">
+                  <header class="order-heading">
+                    <h3>Your order</h3>
+                  </header>
+                  <div class="order-items">
+                    <div class="order-item">
+                      <p>Apple Watch Sport</p>
+                      <p class="order-price">580</p>
+                    </div>
+                    <div class="order-item">
+                      <p>Modern Buckle</p>
+                      <p class="order-price">380</p>
+                    </div>
+                  </div>
+                  <div class="order-subtotals">
+                    <div class="order-subtotal">
+                      <p>Total purchases</p>
+                      <p class="order-price">960.00</p>
+                    </div>
+                    <div class="order-subtotal">
+                      <p>Estimated tax</p>
+                      <p class="order-price">0</p>
+                    </div>
+                  </div>
+                  <div class="order-total">
+                    <p>Total</p>
+                    <p class="order-price order-price--total">960</p>
+                  </div>
+                </div>
+              </div>
+            </aside>
+          </form>
+        </section>
         <footer class="mdl-mega-footer">
           <div class="mdl-mega-footer--middle-section">
             <div class="mdl-mega-footer--drop-down-section">
