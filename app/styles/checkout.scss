@@ -67,21 +67,25 @@
   color: $black !important;
   font-size: 0.8rem;
   font-weight: bolder;
-  margin: 0 0 0 0.5rem;
-  padding: 0 0 0 0.2rem;
+  position: absolute;
+  top: 0.4rem;
+  left: 0.6rem;
+  z-index: 1;
 }
 .checkout-label--capitalize {
   text-transform: capitalize;
 }
 .checkout-input {
+  position: relative;
   display: block;
   font-family: $latoRegular;
   font-size: $normal;
   width: 100%;
   border: none;
   margin: 0.1rem 0 0 0;
-  padding: 0 0 0.5rem 0.7rem;
-
+  padding: 1.2rem 0 0.5rem 0.7rem;
+  background: $white;
+  border-radius: $radius;
   &::placeholder {
     font-family: $latoRegular;
     font-size: $normal;
@@ -92,13 +96,12 @@
     border-bottom: solid 3px $green;
   }
 }
+.checkout-input--invalid {
+  border-bottom: solid 3px $red;
+}
 .checkout-input--container {
   position: relative;
-  background: $white;
-  padding: 0.3rem 0 0 0;
   width: 100%;
-  border-radius: 0.2rem;
-  box-shadow: $shadow;
 }
 .checkout-input--left {
   width: 49%;
@@ -107,13 +110,15 @@
   width: 49%;
 }
 .checkout-input--select {
+  position: relative;
   font-family: $latoRegular;
   font-size: $normal;
-  background: url("../images/arrow.svg") 9.6rem -0.4rem no-repeat;
+  background: $white url("../images/arrow.svg") 9.6rem -0.4rem no-repeat;
   background-size: 100% 100%;
   appearance: none;
-  margin: 0;
-  padding: 0 0 0.3rem 0.4rem;
+  margin: 0.1rem 0 0 0;
+  padding: 1.2rem 0 0.4rem 0.4rem;
+  border-radius: $radius;
 }
 .checkout-input--image {
   position: absolute;
@@ -154,8 +159,44 @@
   &:disabled {
     background: $lightGreen;
   }
-  &:hover, &:focus {
+  &:hover,
+  &:focus {
     opacity: 0.8;
+  }
+}
+.checkout-tooltip {
+  position: absolute;
+  right: 0.7rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: $normal;
+  color: $grey;
+  width: 1.2rem;
+  height: 1.2rem;
+  border-radius: $circle;
+  border: solid 1px $grey;
+  margin: 0.1rem 0 0 0;
+  padding: 0 0 0 0.35rem;
+  cursor: pointer;
+  .checkout-tooltip--text {
+    position: absolute;
+    top: 3rem;
+    right: -1rem;
+    display: none;
+    width: 20rem;
+    padding: 1rem;
+    border: solid 1px $grey;
+    border-radius: $radius;
+    background: $white;
+    color: $grey;
+    transition: $transition;
+  }
+  &:hover {
+    border: solid 1px $black;
+    color: $black;
+    .checkout-tooltip--text {
+      display: block;
+    }
   }
 }
 .order {
@@ -171,11 +212,12 @@
 }
 .order-heading {
   h3 {
-  font-family: $latoBlack;
-  font-size: 0.75rem;
-  text-transform: uppercase;
-  line-height: 1;
-  margin: 0;
+    font-family: $latoBlack;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    line-height: 1;
+    margin: 0;
+    color: &black;
   }
 }
 .order-items {
@@ -184,6 +226,7 @@
   flex-wrap: wrap;
   justify-content: space-between;
   margin: 1.3rem 0 0.7rem 0;
+  color: $darkGrey;
 }
 .order-item {
   width: 100%;
@@ -208,6 +251,7 @@
   border-top: $borderDotted;
   border-bottom: $borderDotted;
   padding: 0.3rem 0 0.5rem 0;
+  color: $darkGrey;
 }
 .order-subtotal {
   width: 100%;
@@ -223,9 +267,11 @@
   display: flex;
   justify-content: space-between;
   padding: 0.5rem 0;
+  color: $black;
 }
 .order-price--total {
   font-family: $latoBlack;
   font-size: 1.3rem;
   margin: 0.3rem 0 0 0;
+  color: $black;
 }
