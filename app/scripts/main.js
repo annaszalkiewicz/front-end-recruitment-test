@@ -84,15 +84,18 @@ import Controller from './Bacon/Controller';
   }
 
   // Your custom JavaScript goes here
-  /**
-   * Initialize Bacon controller
-   * @param {object} model
-   * @param {object} view
-   * @param {object} controller
-   */
-  const model = new Model();
-  const view = new View(model);
-  const controller = new Controller(model, view);
 
-  console.log(controller);
+  /**
+   * Check for path and run code only on submodule sub-page
+   */
+  if (window.location.pathname === '/submodule.html') {
+    /**
+    * Initialize Bacon controller
+    * @param {object} model
+    * @param {object} view
+    */
+    const model = new Model();
+    const view = new View(model);
+    new Controller(model, view);
+  }
 })();
