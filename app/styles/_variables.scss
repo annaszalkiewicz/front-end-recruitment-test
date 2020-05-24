@@ -1,0 +1,31 @@
+@import 'fonts';
+
+// THEME COLORS
+
+$lightGrey: #f2f2f2;
+$grey: #9b9b9b;
+$darkGrey: #484848;
+$lightGreen: #6bd400;
+$green: #11d400;
+$indigo: #303f9f;
+$black: #000;
+$white: #fff;
+
+// TYPOGRAPHY
+
+$latoRegular: 'Lato Regular', sans-serif;
+$latoBold: 'Lato Bold', sans-serif;
+$latoBlack: 'Lato Black', sans-serif;
+
+$small: 0.8rem;
+$normal: 1rem;
+$large: 1.5rem;
+
+// MISCELLANEOUS
+
+$radius: 0.2rem;
+$circle: 50%;
+$shadow: 0 2px 5px -5px $grey;
+$border: solid 1px $lightGrey;
+$borderDotted: dotted 1px $grey;
+$transition: all 0.3s ease;

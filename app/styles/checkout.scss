@@ -1,0 +1,231 @@
+@import "variables";
+
+.checkout {
+  background: $lightGrey;
+  font-family: $latoRegular;
+  font-size: $normal;
+  margin: 0 2em;
+  line-height: 1;
+}
+.checkout-form {
+  width: 100%;
+  max-width: 850px;
+  .mdl-cell--8-col {
+    width: 66%;
+  }
+}
+.checkout-row {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin: 1.2rem 0 0 0;
+  &:nth-child(6) {
+    justify-content: left;
+    align-items: center;
+  }
+  &:nth-child(7) {
+    margin: 0.6rem 0 0 0;
+  }
+}
+.checkout-row--no-spacing {
+  margin: 0;
+}
+.checkout-heading {
+  font-family: $latoBold;
+  font-size: $small;
+  text-transform: uppercase;
+  color: $black;
+  margin: 1rem 0 0.7rem 0;
+  &:nth-child(2) {
+    margin: 0.8rem 0 0.7rem 0;
+  }
+}
+.checkout-heading--span {
+  display: inline-flex;
+  flex-direction: column;
+  font-family: $latoBlack;
+  color: #fff;
+  background: #000;
+  width: 1.3rem;
+  height: 1.3rem;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  margin: 0 0.8rem 0 -2rem;
+}
+.checkout-heading--payment {
+  margin: 0.6rem 0 0 0;
+  .checkout-heading--span {
+    margin: 0 0.5rem 0 -2rem;
+  }
+}
+.checkout-heading--lock {
+  font-size: 1.1rem;
+  margin: 0.3rem 0 0 1rem;
+}
+.checkout-label {
+  color: $black !important;
+  font-size: 0.8rem;
+  font-weight: bolder;
+  margin: 0 0 0 0.5rem;
+  padding: 0 0 0 0.2rem;
+}
+.checkout-label--capitalize {
+  text-transform: capitalize;
+}
+.checkout-input {
+  display: block;
+  font-family: $latoRegular;
+  font-size: $normal;
+  width: 100%;
+  border: none;
+  margin: 0.1rem 0 0 0;
+  padding: 0 0 0.5rem 0.7rem;
+
+  &::placeholder {
+    font-family: $latoRegular;
+    font-size: $normal;
+    color: $darkGrey;
+  }
+  &:focus,
+  &:active {
+    border-bottom: solid 3px $green;
+  }
+}
+.checkout-input--container {
+  position: relative;
+  background: $white;
+  padding: 0.3rem 0 0 0;
+  width: 100%;
+  border-radius: 0.2rem;
+  box-shadow: $shadow;
+}
+.checkout-input--left {
+  width: 49%;
+}
+.checkout-input--right {
+  width: 49%;
+}
+.checkout-input--select {
+  font-family: $latoRegular;
+  font-size: $normal;
+  background: url("../images/arrow.svg") 9.6rem -0.4rem no-repeat;
+  background-size: 100% 100%;
+  appearance: none;
+  margin: 0;
+  padding: 0 0 0.3rem 0.4rem;
+}
+.checkout-input--image {
+  position: absolute;
+  right: 0.9rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 2.4rem;
+  height: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: $border;
+  padding: 0.2rem;
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+.checkout-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 3.5rem;
+  margin: 1.4rem 0 5rem 0;
+  padding: 0.3rem;
+  text-transform: uppercase;
+  color: white;
+  background: $green;
+  transition: $transition;
+  border: none;
+  border-radius: $radius;
+  font-family: $latoBlack;
+  span {
+    font-size: 1.1rem;
+    margin: 0 0.5rem 0 0;
+  }
+  &:disabled {
+    background: $lightGreen;
+  }
+  &:hover, &:focus {
+    opacity: 0.8;
+  }
+}
+.order {
+  width: 98%;
+  background: $white;
+  margin: 4.2rem 0 0 0.8rem;
+  padding: 0.4rem;
+  border-radius: $radius;
+}
+.order-border {
+  border: $borderDotted;
+  padding: 0.7rem 0.8rem 0.7rem 0.7rem;
+}
+.order-heading {
+  h3 {
+  font-family: $latoBlack;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  line-height: 1;
+  margin: 0;
+  }
+}
+.order-items {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 1.3rem 0 0.7rem 0;
+}
+.order-item {
+  width: 100%;
+  display: inline-flex;
+  justify-content: space-between;
+  p {
+    font-size: 0.8rem;
+    line-height: 0.8;
+  }
+}
+.order-price {
+  &::before {
+    content: "\0024";
+    margin: 0 0.2rem 0 0;
+  }
+}
+.order-subtotals {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  border-top: $borderDotted;
+  border-bottom: $borderDotted;
+  padding: 0.3rem 0 0.5rem 0;
+}
+.order-subtotal {
+  width: 100%;
+  display: inline-flex;
+  justify-content: space-between;
+  p {
+    line-height: 0.8;
+    font-size: 0.8rem;
+    margin: 0.5rem 0 0.6rem 0;
+  }
+}
+.order-total {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+}
+.order-price--total {
+  font-family: $latoBlack;
+  font-size: 1.3rem;
+  margin: 0.3rem 0 0 0;
+}

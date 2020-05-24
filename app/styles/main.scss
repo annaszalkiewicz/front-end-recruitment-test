@@ -18,12 +18,14 @@
 Note: any .css or .scss files included in the 'styles' directory
 will be correctly compiled during `gulp serve` and `gulp`
  */
+@import 'variables';
 
 * {
   box-sizing: border-box;
 }
 html, body {
-  font-family: 'Roboto', 'Helvetica', sans-serif;
+  font-family: $latoRegular;
+  font-size: $normal;
   margin: 0;
   padding: 0;
 }
@@ -183,9 +185,6 @@ html, body {
 .mdl-demo .mdl-card .mdl-card__supporting-text > h3:first-child {
   margin-bottom: 24px;
 }
-.mdl-demo .mdl-layout__tab-panel:not(#overview) {
-  background-color: white;
-}
 .mdl-demo #features section {
   margin-bottom: 72px;
 }
@@ -215,3 +214,4 @@ html, body {
   z-index: 99;
 }
 @import './bacon.scss';
+@import './checkout.scss';
