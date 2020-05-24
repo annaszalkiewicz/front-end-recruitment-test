@@ -1,18 +1,26 @@
 # Snowdog Front-end Recruitment test
 
-## Rules
-* Please do not use fake Github accounts, we want to check your contributions history since we do a lot in open source.
-* Remember to commit changes after every task.
-* We are not answering any questions about this test. Everyone work with the same set of information, to let us fairly judge your work.
+## Overview
+This project is part recruitment process at (https://snow.dog/)[Snowdog]
 
-## Before you start
-Fork this repository, it needs to stay on Github, available for everyone.
+## How to run project on local machine
 
-The test is based on [Google Web Starter Kit](https://github.com/google/web-starter-kit) v0.6.5
+1. Clone repository
+```
+$ git clone https://github.com/annaszalkiewicz/front-end-recruitment-test.git
+```
+2. Install all dependencies
+```
+$ npm install --global gulp && npm install
+```
+Follow [installation instructions](https://github.com/google/web-starter-kit/blob/v0.6.5/docs/install.md) and read [commands](https://github.com/google/web-starter-kit/blob/v0.6.5/docs/commands.md) documentation for more details
 
-Follow [installation instructions](https://github.com/google/web-starter-kit/blob/v0.6.5/docs/install.md) and read [commands](https://github.com/google/web-starter-kit/blob/v0.6.5/docs/commands.md) documentation to set up developer tools. You should end with a working test page on http://localhost:3000/.
+3. Run project
+```
+$ npm start
+```
+Project should open automatically in your browser (http://localhost:3000/)[http://localhost:3000/]
 
----
 
 ### Task 1
 Add [this repo](https://github.com/SnowdogApps/front-end-recruitment-test-submodule) as submodule at `/submodule` folder, then run gulp task `submodule` to add symlink.
