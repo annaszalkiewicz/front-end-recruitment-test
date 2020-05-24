@@ -17,12 +17,12 @@ class Model {
     this.firstName = {
       value: '',
       valid: false,
-      minLength: 3,
+      regex: /^[a-z]{3,}/i,
     };
     this.lastName = {
       value: '',
       valid: false,
-      minLength: 3,
+      regex: /^[a-z]{3,}/i,
     };
     this.email = {
       value: '',
@@ -32,7 +32,7 @@ class Model {
     this.postalCode = {
       value: '',
       valid: false,
-      length: 5,
+      regex: /\b\d{5}\b/,
     };
     this.phoneNumber = {
       value: '',

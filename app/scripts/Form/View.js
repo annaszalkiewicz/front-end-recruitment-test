@@ -15,14 +15,14 @@ class View {
      * @param {HTMLElement} button
      */
   constructor() {
-    this.firstName = document.getElementById('first-name');
-    this.lastName = document.getElementById('last-name');
+    this.firstName = document.getElementById('firstName');
+    this.lastName = document.getElementById('lastName');
     this.email = document.getElementById('email');
-    this.postalCode = document.getElementById('postal-code');
+    this.postalCode = document.getElementById('postalCode');
     this.phone = document.getElementById('phone');
-    this.cardNumber = document.getElementById('card-number');
-    this.securityCode = document.getElementById('security-code');
-    this.expDate = document.getElementById('exp-date');
+    this.creditCardNumber = document.getElementById('creditCardNumber');
+    this.securityCode = document.getElementById('securityCode');
+    this.expDate = document.getElementById('expDate');
     this.form = document.getElementById('checkout-form');
     this.button = document.getElementById('checkout-button');
     /**
@@ -34,6 +34,7 @@ class View {
     this.removeDisabled = this.removeDisabled.bind(this);
     this.removeInputsValues = this.removeInputsValues.bind(this);
     this.addRedBorder = this.addRedBorder.bind(this);
+    this.removeRedBorder = this.removeRedBorder.bind(this);
   }
   /**
    * Render message if input is invalid
@@ -44,28 +45,28 @@ class View {
     p.classList.add('checkout-message--error');
     switch (e.target) {
     case this.firstName:
-      p.innerHTML = 'Your name must be min. 3 charakters.';
+      p.innerHTML = 'Your name must have min. 3 characters.';
       break;
     case this.lastName:
-      p.innerHTML = 'Your last name must be min. 3 charakters.';
+      p.innerHTML = 'Your last name must have min. 3 characters.';
       break;
     case this.email:
       p.innerHTML = 'Please input valid email address.';
       break;
     case this.postalCode:
-      p.innerHTML = 'Postal code must consists of 5 digits.';
+      p.innerHTML = 'Postal code must consists of 5 digits only.';
       break;
-    case this.phone:
-      p.innerHTML = 'Please input alid telephone number.';
+    case this.phoneNumber:
+      p.innerHTML = 'Please input valid telephone number.';
       break;
-    case this.cardNumber:
-      p.innerHTML = 'Please input valid credit card details';
+    case this.creditCardNumber:
+      p.innerHTML = 'Please input valid credit card details.';
       break;
     case this.securityCode:
-      p.innerHTML = 'Please input valid security code';
+      p.innerHTML = 'Please input valid security code.';
       break;
     case this.expDate:
-      p.innerHTML = 'Expiration date is invalid';
+      p.innerHTML = 'Expiration date is invalid.';
       break;
     default:
       break;
@@ -87,6 +88,13 @@ class View {
    */
   addRedBorder(e) {
     e.target.classList.add('checkout-input--invalid');
+  }
+  /**
+   * Remove invalid class if input is corrected
+   * @param {object} e - event
+   */
+  removeRedBorder(e) {
+    e.target.classList.remove('checkout-input--invalid');
   }
   /**
    * @param {function} Message to display if form is valid

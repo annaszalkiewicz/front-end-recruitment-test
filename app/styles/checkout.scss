@@ -109,12 +109,15 @@
 .checkout-input--right {
   width: 49%;
 }
+.checkout-input--background {
+  background: $white;
+}
 .checkout-input--select {
   position: relative;
   font-family: $latoRegular;
   font-size: $normal;
-  background: $white url("../images/arrow.svg") 9.6rem -0.4rem no-repeat;
-  background-size: 100% 100%;
+  background: url("../images/arrow.svg") 11rem 0.5rem no-repeat;
+  background-size: 60% 60%;
   appearance: none;
   margin: 0.1rem 0 0 0;
   padding: 1.2rem 0 0.4rem 0.4rem;
@@ -123,8 +126,7 @@
 .checkout-input--image {
   position: absolute;
   right: 0.9rem;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 0.9rem;
   width: 2.4rem;
   height: 1.5rem;
   display: flex;

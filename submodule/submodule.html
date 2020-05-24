@@ -137,24 +137,24 @@
               </div>
               <div class="checkout-row checkout-row--no-spacing">
                 <div class="checkout-input--container checkout-input--left">
-                  <label class="checkout-label" for="first-name"
+                  <label class="checkout-label" for="firstName"
                     >First name</label
                   >
                   <input
                     class="checkout-input"
                     type="text"
-                    id="first-name"
+                    id="firstName"
                     placeholder="Elon"
                   />
                 </div>
                 <div class="checkout-input--container checkout-input--right">
-                  <label class="checkout-label" for="last-name"
+                  <label class="checkout-label" for="lastName"
                     >Last name</label
                   >
                   <input
                     class="checkout-input"
                     type="text"
-                    id="last-name"
+                    id="lastName"
                     placeholder="Musk"
                   />
                 </div>
@@ -171,30 +171,29 @@
                 </div>
               </div>
               <div class="checkout-row">
-                <div class="checkout-input--container checkout-input--left">
+                <div class="checkout-input--container checkout-input--left checkout-input--background">
                   <label for="country" class="checkout-label">Country</label>
                   <select
                     id="country"
                     name="country"
                     class="checkout-input checkout-input--select"
                   >
-                    <optgroup>
+                      <option value="" disabled>--Select country--</option>
                       <option value="us" selected>United States</option>
                       <option value="pl">Poland</option>
                       <option value="uk">United Kingdom</option>
-                    </optgroup>
                   </select>
                 </div>
                 <div class="checkout-input--container checkout-input--right">
                   <label
                     class="checkout-label checkout-label--capitalize"
-                    for="postal-code"
+                    for="postalCode"
                     >Postal code</label
                   >
                   <input
                     class="checkout-input"
                     type="text"
-                    id="postal-code"
+                    id="postalCode"
                     placeholder="10001"
                   />
                 </div>
@@ -209,7 +208,7 @@
                   <input
                     class="checkout-input"
                     type="text"
-                    id="phone"
+                    id="phoneNumber"
                     placeholder="(212) 692-93-92"
                   />
                 </div>
@@ -225,13 +224,13 @@
                 <div class="checkout-input--container">
                   <label
                     class="checkout-label checkout-label--capitalize"
-                    for="card-number"
+                    for="creditCardNumber"
                     >Credit card number</label
                   >
                   <input
                     class="checkout-input"
                     type="text"
-                    id="card-number"
+                    id="creditCardNumber"
                     placeholder="0000-0000-0000-0000"
                   />
                   <div class="checkout-input--image">
@@ -241,13 +240,13 @@
               </div>
               <div class="checkout-row">
                 <div class="checkout-input--container checkout-input--left">
-                  <label class="checkout-label" for="security-code"
+                  <label class="checkout-label" for="securityCode"
                     >Security code</label
                   >
                   <input
                     class="checkout-input"
                     type="password"
-                    id="security-code"
+                    id="securityCode"
                     placeholder="***"
                   />
                   <div class="checkout-tooltip">?
@@ -255,13 +254,13 @@
                   </div> 
                 </div>
                 <div class="checkout-input--container checkout-input--right">
-                  <label class="checkout-label" for="exp-date"
+                  <label class="checkout-label" for="expDate"
                     >Expiration date</label
                   >
                   <input
                     class="checkout-input"
                     type="text"
-                    id="exp-date"
+                    id="expDate"
                     placeholder="MM/YY"
                   />
                 </div>
